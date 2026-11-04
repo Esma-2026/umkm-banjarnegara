@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Official Page Klinik Sehati Bondolharjo
 
 Website resmi Klinik Sehati Bondolharjo yang menyediakan layanan pendampingan legalitas usaha bagi pelaku UMKM, termasuk pembuatan Nomor Induk Berusaha (NIB), sertifikasi halal, serta layanan konsultasi dan pendampingan usaha.
@@ -44,3 +45,7 @@ Website ini dikembangkan sebagai platform informasi dan layanan digital untuk me
 ├── js/
 ├── assets/
 └── README.md
+=======
+# umkm-banjarnegara
+Website layanan pendampingan UMKM area Banjarnegara, Jawa Tengah, Unit Kerja Desa Bondolharjo.
+>>>>>>> 9375d9a2f844b51fc24e01dbdfbf8a95c24ab419

@@ -122,7 +122,11 @@ dist
 # TernJS port file
 .tern-port
 
+<<<<<<< HEAD
 # Stores VSCode versions used for testing VSCode extensions
+=======
+# Stores Visual Studio Code versions used for testing Visual Studio Code extensions
+>>>>>>> 9375d9a2f844b51fc24e01dbdfbf8a95c24ab419
 .vscode-test
 
 # pnpm
@@ -141,3 +145,12 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+<<<<<<< HEAD
+=======
+
+# Astro generated types
+.astro/
+
+# Turbo Repo
+.turbo
+>>>>>>> 9375d9a2f844b51fc24e01dbdfbf8a95c24ab419
