@@ -361,8 +361,7 @@ header::after{
 /* ===== footer ===== */
 .sponsor-footer{
     width:100%;
-
-    padding:0px 0;
+    padding-top: 30px;
     margin-top: 10px;
 
     display:flex;
@@ -403,11 +402,6 @@ header::after{
     text-align: center;
     opacity: 0.8;
 }
-.latest-articles{
-    max-width:1200px;
-    margin:50px auto;
-    padding:0 20px;
-}
 
 .article-title{
     text-align:center;
@@ -416,52 +410,165 @@ header::after{
     margin-bottom:30px;
     font-weight:700;
 }
-.article-grid{
-    width:min(1100px, 90%);
-    margin:50px auto;
-
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 40px;
 }
-.article-card{
-    display:block;
-    text-decoration:none;
-    color:inherit;
-}
-
-.article-card:visited{
-    color:inherit;
-}
-.article-card img{
-    width:100%;
-    height:auto;
-    display:block;
+.article-card {
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 20px;
+    min-height: auto;
+    box-shadow: 0 4px 14px rgba(0,0,0,.05);
+    background: rgba(255,255,255,0.82);
 }
 
-.article-card:hover{
-    transform:translateY(-5px);
-    text-decoration: none;
-    box-shadow:0 15px 30px rgba(0,0,0,.12);
-
-    border-color:#1b4332;
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-color: rgba(10, 61, 46, 0.3);
 }
 
-.article-card h3{
-    color:#1b4332;
-    margin-bottom:12px;
-    font-size:22px;
+.article-card img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 18px;
 }
 
-.article-card p{
-    color:#555;
-    line-height:1.7;
+.article-card h3 {
+    font-size: 1.35rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #0A3D2E;
 }
+
+.article-card p {
+    color: #4f5b5f;
+    line-height: 1.8;
+}
+
 @media(max-width:768px){
 
     .article-grid{
         grid-template-columns:1fr;
     }
 
+}
+#artikel {
+    position: relative;
+    padding: 80px 0;
+}
+
+#artikel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.70);
+    backdrop-filter: blur(2px);
+}
+
+#artikel .container {
+    position: relative;
+    z-index: 2;
+}
+.article-container {
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+#layanan-kami .container {
+    max-width: 1700px;
+    width: 96%;
+}
+.article-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.7;
+}
+.article-card,
+.article-card *,
+.article-card:hover,
+.article-card:hover * {
+    text-decoration: none !important;
+}
+/* HEADER LAYANAN */
+.layanan-header {
+    width: calc(100% - 80px);
+    margin: 40px auto;
+    padding: 25px 40px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff7c2 0%,
+        #f8df7a 20%,
+        #d4af37 50%,
+        #f8df7a 80%,
+        #fff7c2 100%
+    );
+     border: 1px solid #c9a227; /* sebelumnya 2px */
+     border-radius: 15px;
+    box-shadow:
+        0 0 25px rgba(212, 175, 55, 0.4),
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* EFEK KILAU */
+.layanan-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+
+    width: 40%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.9),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+    animation: shine 4s infinite;
+}
+
+/* JUDUL */
+.layanan-header .article-title {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+    font-size: clamp(1.6rem, 2.2vw, 2.8rem); /* sebelumnya sampai 3.8rem */
+    font-weight: 700;                         /* sebelumnya 800 */
+    letter-spacing: 0.5px;
+    color: #0A3D2E;
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 1),
+        0 0 12px rgba(255, 255, 255, 0.9),
+        0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* ANIMASI */
+@keyframes shine {
+    100% {
+        left: 180%;
+    }
+}
+@keyframes shine {
+    100% {
+        left: 180%;
+    }
 }
