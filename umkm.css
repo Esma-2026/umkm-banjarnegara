@@ -1,121 +1,85 @@
-.main-background {
-    width: 100%;
-    padding-top: calc(170px + 2rem);
+.articles-container{
+    width:min(1700px, calc(100vw - 160px));
+
+    margin:200px auto 60px;
+}
+.articles-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+.articles-header h1{
+    color:#0f4d47;
+    font-size:clamp(2rem,4vw,3.5rem);
+    font-weight: 400px;
+    margin-bottom:15px;
+}
+.articles-header p{
+    width:auto;
+    margin:auto;
+    font-size: 2rem;
+    font-weight: 400px;
+    line-height:1.8;
+    color:#555;
+}
+.article-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(320px,1fr));
+
+    gap:20px;
+
+    max-width:100%;
+
+    margin:0 auto;
 }
 
-.content-layout {
-    width: 100%;
-    padding-bottom: 20px;
-    display: grid;
-    grid-template-columns: 2.5fr 1fr;
-    gap: 40px;
+.article-card{
+    text-decoration:none;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    transition:.3s ease;
 }
+.article-card:hover{
+    transform:translateY(-8px);
 
-.main-article {
-    background: rgba(255,255,255,.85);
-    border-radius: 24px;
-    padding: 40px;
-    box-shadow: 0 4px 20px rgba(0,0,0,.08);
+    box-shadow:
+        0 18px 40px rgba(185,150,221,.25);
 }
-
-.article-header h1 {
-    font-size: 2.8rem;
-    color: #0A3D2E;
-    margin-bottom: 20px;
-    line-height: 1.3;
+.article-card img{
+    width:100%;
+    aspect-ratio:3/2;
+    object-fit:auto;
+    display:block;
 }
-
-.article-badge {
-    display: inline-block;
-
-    padding: 8px 15px;
-
-    background: #d4af37;
-    color: white;
-
-    border-radius: 999px;
-    font-size: .9rem;
-    font-weight: bold;
+.article-card-content{
+    padding:20px;
 }
-
-.featured-image {
-    width: 100%;
-    border-radius: 18px;
-    margin: 25px 0;
+.article-card-content h3{
+    color:#0f4d47;
+    font-size:1.2rem;
+    margin-bottom:12px;
 }
-
-.article-content {
-    font-size: 1.1rem;
-    line-height: 2;
+.article-card-content p{
+    color:#666;
+    line-height:1.7;
 }
+@media(max-width:992px){
 
-.sidebar {
-    position: sticky;
-    top: 10px;
-    padding-top: 10px;
-    padding-right: 10px;
-    height: fit-content;
-}
-
-.sidebar-title {
-    margin-bottom: 20px;
-    color: #0A3D2E;
-}
-
-.mini-card {
-    display: flex;
-    gap: 15px;
-
-    text-decoration: none;
-    color: inherit;
-
-    background: rgba(255,255,255,.88);
-    padding: 12px;
-
-    margin-bottom: 15px;
-
-    border-radius: 16px;
-    border: 1px solid rgba(0,0,0,.08);
-
-    transition: .3s;
-}
-
-.mini-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.12);
-}
-
-.mini-card img {
-    width: 150px;
-    height: auto;
-
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.mini-card h4 {
-    margin-bottom: 8px;
-    font-size: 1.5rem;
-    color: #0A3D2E;
-}
-
-.mini-card p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0;
-}
-@media (max-width: 992px) {
-
-    .content-layout {
-        grid-template-columns: 1fr;
+    .article-grid{
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
-    .sidebar {
-        position: static;
-    }
+}
+@media(max-width:768px){
 
-    .article-header h1 {
-        font-size: 2rem;
+    .article-grid{
+        grid-template-columns:1fr;
     }
 
 }
