@@ -11,10 +11,17 @@ body{
 }
 
 body{
-    background-image:url("assets/background-website.png");
-    background-position:center top;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-image:
+        url("assets/background-website.png"),
+        url("assets/background-website.png");
+
+    background-position:
+        center top,
+        center bottom;
+
+    background-repeat:
+        no-repeat,
+        no-repeat;
 }
 
 /* ===== HEADER ===== */
@@ -119,6 +126,7 @@ header::after{
         font-size:16px;
     }
 }
+
 .menu-item button{
     background: transparent;
     border: none;
@@ -162,6 +170,13 @@ header::after{
     box-shadow:
         0 10px 25px rgba(185,150,221,.35);
 }
+.menu-item a.active{
+    background:#b996dd;
+    color:white;
+    box-shadow:
+        0 10px 25px rgba(185,150,221,.35);
+}
+
 .main-menu{
     display:flex;
     justify-content:center;

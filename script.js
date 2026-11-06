@@ -132,3 +132,39 @@ function updateCalendarInfo() {
 }
 
 updateCalendarInfo();
+
+console.log("typing loaded");
+
+const typingElement =
+    document.getElementById("typing-title");
+
+console.log(typingElement);
+if (typingElement) {
+
+    const text = "Ilustrasi Proses Pendampingan";
+
+    function typeLoop() {
+
+        let index = 0;
+
+        typingElement.textContent = "";
+
+        const interval = setInterval(() => {
+
+            typingElement.textContent =
+                text.slice(0, index + 1);
+
+            index++;
+
+            if (index === text.length) {
+
+                clearInterval(interval);
+
+            setTimeout(typeLoop, 4000);
+            }
+
+        }, 70);
+    }
+
+    typeLoop();
+}
