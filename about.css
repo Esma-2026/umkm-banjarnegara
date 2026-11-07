@@ -1,6 +1,6 @@
 .hero-section{
     max-width:1200px;
-    margin:50px auto;
+    margin:30px auto;
     padding:40px;
 }
 
@@ -8,10 +8,30 @@
     display:flex;
     align-items:center;
     gap:30px;
-    background:rgba(255,255,255,.85);
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(255,255,255,.35) 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(255,255,255,.2) 0%,
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #fffdf5 0%,
+            #fff4c1 25%,
+            #f7d774 55%,
+            #d4af37 100%
+        );
+
     border-radius:15px;
     padding:20px;
-    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.08);
 }
 .hero-photo{
     position: relative;
@@ -19,10 +39,21 @@
     margin: 10px auto;
 }
 
-.hero-photo img{
+.hero-photo-img{
     width: 300px;
     height: auto;
     display: block;
+
+    border-radius:
+        58% 42% 55% 45% /
+        42% 58% 38% 62%;
+
+    overflow: hidden;
+
+    border: 3px solid rgba(212,175,55,.7);
+
+    box-shadow:
+        0 8px 24px rgba(212,175,55,.35);
 }
 .service-area{
     position: absolute;
